@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="537.0" prefWidth="1033.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paoim4.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="331.0" text="System Pracowników" textAlignment="CENTER" textOverrun="CLIP" underline="true">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Label>
+         <Button fx:id="oceny" mnemonicParsing="false" onAction="#oceny" prefHeight="36.0" prefWidth="103.0" text="Oceny" />
+      </children>
+   </HBox>
+   <HBox alignment="TOP_CENTER" prefHeight="255.0" prefWidth="438.0" spacing="5.0">
+      <children>
+         <TableView fx:id="table1" prefHeight="249.0" prefWidth="279.0">
+           <columns>
+               <TableColumn fx:id="ID_g" prefWidth="77.0" text="ID" />
+             <TableColumn fx:id="Nazwa_g" prefWidth="83.0" text="Nazwa Grupy" />
+               <TableColumn fx:id="zapelnienie" prefWidth="118.0" text="Zapełnienie" />
+           </columns>
+         </TableView>
+         <TableView fx:id="table2" prefHeight="249.0" prefWidth="479.0">
+           <columns>
+               <TableColumn fx:id="ID_p" prefWidth="71.0" text="ID_p" />
+             <TableColumn fx:id="imie" prefWidth="82.0" text="Imie" />
+             <TableColumn fx:id="nazwisko" prefWidth="108.0" text="Nazwisko" />
+               <TableColumn fx:id="wyplata" text="Wypłata" />
+               <TableColumn fx:id="stan" prefWidth="63.0" text="Stan" />
+               <TableColumn fx:id="rok" prefWidth="74.0" text="Rok" />
+           </columns>
+         </TableView>
+      </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="45.0" prefWidth="948.0" spacing="20.0">
+      <children>
+         <Button fx:id="del" alignment="CENTER" contentDisplay="CENTER" layoutX="411.0" layoutY="12.0" mnemonicParsing="false" onAction="#delButton1" prefHeight="42.0" prefWidth="146.0" text="Del gr" textAlignment="CENTER" />
+         <Button fx:id="info" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#infoButton" prefHeight="42.0" prefWidth="146.0" text="Info" textAlignment="CENTER" />
+         <Button fx:id="del1" alignment="CENTER" contentDisplay="CENTER" layoutX="494.0" layoutY="12.0" mnemonicParsing="false" onAction="#delButton2" prefHeight="42.0" prefWidth="146.0" text="Del prac" textAlignment="CENTER" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="28.0" prefWidth="948.0" spacing="10.0">
+      <children>
+         <TextField fx:id="nazwa" promptText="Nazwa Grupy" />
+         <TextField fx:id="max" promptText="Liczba pracowników" />
+         <Button fx:id="addgr" mnemonicParsing="false" onAction="#addgr" prefHeight="35.0" prefWidth="80.0" text="Add Grupa" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="458.0" prefHeight="28.0" prefWidth="948.0" spacing="10.0">
+      <children>
+         <TextField fx:id="imie_d" layoutX="228.0" layoutY="12.0" promptText="Imie" />
+         <TextField fx:id="nazwisko_d" layoutX="387.0" layoutY="12.0" promptText="Nazwisko" />
+         <TextField fx:id="wyplata_d" promptText="Wypłata" />
+         <ChoiceBox fx:id="stan_d" prefWidth="150.0" />
+         <TextField fx:id="rok_d" layoutX="308.0" layoutY="12.0" promptText="Rok Urodzenia" />
+         <TextField fx:id="ID_gp" layoutX="694.0" layoutY="10.0" promptText="ID_gp" />
+         <Button fx:id="addpr" mnemonicParsing="false" onAction="#addpr" prefHeight="28.0" prefWidth="103.0" text="Add Pracownik" />
+      </children>
+   </HBox>
+   <TextField fx:id="szukaj" alignment="CENTER" maxWidth="300.0" onKeyPressed="#show" promptText="Nazwisko szukanego pracownika" />
+</VBox>

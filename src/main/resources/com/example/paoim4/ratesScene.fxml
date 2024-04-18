@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="960.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paoim4.RatesScene">
+   <children>
+      <VBox alignment="CENTER" layoutX="129.0" layoutY="64.0" prefHeight="414.0" prefWidth="450.0" spacing="30.0">
+         <children>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#powr" prefHeight="41.0" prefWidth="108.0" text="Powrót" textAlignment="CENTER" />
+            <TableView fx:id="table1" prefHeight="299.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="ID_R" prefWidth="47.0" text="ID" />
+                <TableColumn fx:id="ID_grupy" prefWidth="60.0" text="Grupa" />
+                  <TableColumn fx:id="ocena" prefWidth="61.0" text="Ocena" />
+                  <TableColumn fx:id="Date" prefWidth="75.0" text="Data" />
+                  <TableColumn fx:id="komentarz" prefWidth="206.0" text="Komentarz" />
+              </columns>
+            </TableView>
+            <Button fx:id="dodaj" mnemonicParsing="false" onAction="#dodaj" prefHeight="31.0" prefWidth="101.0" text="Dodaj" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="ID_d" promptText="Grupa" />
+                  <TextField fx:id="ocena_d" promptText="Ocena" />
+                  <TextField fx:id="kom" layoutX="159.0" layoutY="10.0" promptText="Kom" />
+               </children></HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>
